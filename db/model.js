@@ -2,18 +2,46 @@ const mongoose = require("mongoose");
 
 
 const testSchema = new mongoose.Schema({
-    name:{
+    Name:{
         type:String,
         required:true
     },
-    email:{
+    app:{
         type:String,
         required:true,
         unique:true
     },
-    password:{
+    iot:{
         type:String,
         required:true
+    },
+    ml:{
+        type:String,
+        required:true 
+    },
+    cloud:{
+        type:String,
+        required:true  
+    },
+    mechatronics:{
+        type:String,
+        required:true 
+    },
+    web:{
+        type:String,
+        required:true 
+    },
+    design:{
+        type:String,
+        required:true 
+    },
+    video:{
+        type:String,
+        required:true 
+    },
+    content:{
+        type:String,
+        required:true 
     }
 })
 

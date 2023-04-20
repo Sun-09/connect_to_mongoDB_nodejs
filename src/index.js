@@ -4,6 +4,11 @@ const port = 3000;
 require("../db/config")
 const Test = require("../db/model")
 app.use(express.json());
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+  });
+
 app.post("/test", async(req, res)=>{
     try{
         const createData = new Test(req.body);
