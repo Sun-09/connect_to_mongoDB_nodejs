@@ -54,8 +54,22 @@
 
         function success(result) {
             console.log(result)
+            // result = result.replace['name', '"name"'];
+            // result = result.replace['app', '"app"'];
+            // result = result.replace['iot', '"iot"'];
+            // result.replace['ml', '"ml"'];
+            // result = result.replace['web', '"web"'];
+            // result = result.replace['mechatronics', '"mechatronics"'];
+            // result = result.replace['cloud', '"cloud"'];
+            // result = result.replace['design', '"design"'];
+            // result = result.replace['video', '"video"'];
+            // result = result.replace['content', '"content"'];
             document.getElementById('result').innerHTML = result;
-            result = {result};
+            result=result.split(', ');
+            // Object.assign(["name", "app", "iot", "ml", "web", "mechatronics", "cloud", "design", "video", "content"], result);
+
+            result=Object.assign({}, result);
+            result = JSON.parse(JSON.stringify(result));
             postData('/test', result)
                 .then((data) => {
                 console.log(data); 
