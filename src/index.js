@@ -10,6 +10,8 @@ app.get('/', (req, res) => {
   });
 
 app.post("/test", async(req, res)=>{
+    value = req.body
+    console.log(req.body)
     try{
         const createData = new Test(req.body);
         const results = await createData.save();

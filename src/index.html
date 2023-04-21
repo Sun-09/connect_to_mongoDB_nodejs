@@ -55,6 +55,7 @@
         function success(result) {
             console.log(result)
             document.getElementById('result').innerHTML = result;
+            result = {result};
             postData('/test', result)
                 .then((data) => {
                 console.log(data); 
